@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="msg"
+            type="String" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="nmmm"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_menu_list" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@drawable/outline_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin_half">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="?actionBarSize"
+                android:layout_marginRight="?actionBarSize"
+                android:layout_marginTop="@dimen/activity_horizontal_margin_half"
+                android:contentDescription="logo"
+                android:src="@drawable/ic_menu_email" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="thank you"
+                android:textColor="@color/colorTextOther"
+                android:textSize="22dp"
+                android:layout_marginBottom="10dp"
+                app:font="@{@string/font_name_helvertica}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/btnContinue"
+                    style="?android:textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin_half"
+                    android:background="@drawable/btn_bg"
+                    android:stateListAnimator="@null"
+                    android:text="continue"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    app:font="@{@string/font_name_myriadpro_regular}"
+                    tools:targetApi="lollipop" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

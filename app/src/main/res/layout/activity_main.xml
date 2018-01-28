@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+<data >
+<import type="android.view.View"/>
+    <import type="java.util.List"/>
+<import type="com.signup.model.DrawerItem"/>
+<variable name="menus"
+    type="List&lt;com.signup.model.DrawerItem&gt;"/>
+</data>
+
+<android.support.v4.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+
+    >
+
+    <include
+        android:id="@+id/content"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headerLayout="@null"
+        android:layout_gravity="start">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+<include layout="@layout/nav_header_main"
+    android:id="@+id/laytHeader"
+    />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/fullStdMargin"
+        android:orientation="vertical"
+        android:clickable="false">
+
+        <include
+            android:id="@+id/laytHome"
+            layout="@layout/item_menu_drawer"
+            app:imageSrc="@{menus[0].getResId()}"
+            app:isVisible="@{true}"
+            app:titleEn="@{menus[0].getTitle()}" />
+
+
+        <include
+            android:id="@+id/laytLogin"
+            layout="@layout/item_menu_drawer"
+            app:imageSrc="@{menus[1].getResId()}"
+            app:isVisible="@{true}"
+            app:titleEn="@{menus[1].getTitle()}" />
+
+        <include
+            android:id="@+id/laytFav"
+            layout="@layout/item_menu_counter"
+
+
+            app:imageSrc="@{menus[2].getResId()}"
+            app:isVisible="@{menus.size()==8 ? true :false}"
+            app:titleEn="@{menus[2].getTitle()}" />
+
+        <include
+            android:id="@+id/laytAbout"
+            layout="@layout/item_menu_drawer"
+
+            app:imageSrc="@{menus[3].getResId()}"
+            app:isVisible="@{true}"
+            app:titleEn="@{menus[3].getTitle()}" />
+
+        <include
+            android:id="@+id/laytFaq"
+            layout="@layout/item_menu_drawer"
+
+            app:imageSrc="@{menus[4].getResId()}"
+            app:isVisible="@{true}"
+            app:titleEn="@{menus[4].getTitle()}" />
+
+
+        <include
+            android:id="@+id/laytContact"
+            layout="@layout/item_menu_drawer"
+
+            app:imageSrc="@{menus[5].getResId()}"
+            app:isVisible="@{true}"
+            app:titleEn="@{menus[5].getTitle()}" />
+
+        <include
+            android:id="@+id/laytSetting"
+            layout="@layout/item_menu_drawer"
+
+            app:imageSrc="@{menus[6].getResId()}"
+            app:isVisible="@{true}"
+            app:titleEn="@{menus[6].getTitle()}" />
+    </LinearLayout>
+
+</ScrollView>
+
+        </LinearLayout>
+
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>
+
+</layout>

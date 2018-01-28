@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="canShowLoader"
+            type="boolean" />
+
+        <variable
+            name="customMargin"
+            type="int" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/common_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        style="?android:textAppearanceMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:text="Profile"
+                        android:textColor="@color/colorTextOther"
+                        app:font="@{@string/font_name_helvertica}" />
+
+                    <ImageView
+                        android:id="@+id/ivPicture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/activity_horizontal_margin"
+                        android:contentDescription="sss"
+                        android:minHeight="85dp"
+                        android:minWidth="85dp"
+                        android:src="@drawable/ic_review_holder" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etUserName"
+                            style="?android:textAppearanceSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/outline_bg"
+                            android:drawablePadding="@dimen/activity_horizontal_margin_half"
+                            android:drawableStart="@drawable/ic_password"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/full.name"
+                            android:inputType="textPersonName|textCapWords"
+                            android:maxLines="1"
+                            android:padding="@dimen/padding"
+                            android:textColor="@color/colorTextOther"
+                            app:font="@{@string/font_name_myriadpro_regular}" />
+
+                        <EditText
+                            android:id="@+id/etEmail"
+                            style="?android:textAppearanceSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/outline_bg"
+                            android:drawablePadding="@dimen/activity_horizontal_margin_half"
+                            android:drawableStart="@drawable/ic_email"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/email"
+                            android:imeOptions="actionSend"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:padding="@dimen/padding"
+                            android:textColor="@color/colorTextOther"
+                            app:font="@{@string/font_name_myriadpro_regular}" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btnUpdate"
+                                style="?android:textAppearanceMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:background="@drawable/btn_bg"
+                                android:stateListAnimator="@null"
+                                android:text="update"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                app:font="@{@string/font_name_myriadpro_regular}"
+                                tools:targetApi="lollipop" />
+
+                            <Button
+                                android:id="@+id/btnChangePass"
+                                style="?android:textAppearanceMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:background="@drawable/btn_bg"
+                                android:stateListAnimator="@null"
+                                android:text="change pass"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                app:font="@{@string/font_name_myriadpro_regular}"
+                                tools:targetApi="lollipop" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <include
+                android:id="@+id/loader"
+                layout="@layout/loader_view"
+                app:canShowLoader="@{canShowLoader}"
+                app:customMargin="@{customMargin}" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

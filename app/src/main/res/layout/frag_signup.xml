@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="canShowLoader"
+            type="boolean" />
+
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/common_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:scrollbars="none"
+                tools:ignore="UselessParent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        style="?android:textAppearanceMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:text="@string/create.account"
+                        android:textColor="@color/colorTextOther"
+                        app:font="@{@string/font_name_helvertica}" />
+
+                    <ImageView
+                        android:id="@+id/ivPicture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/activity_horizontal_margin"
+                        android:contentDescription="nhh"
+                        android:minHeight="85dp"
+                        android:minWidth="85dp"
+                        android:src="@drawable/ic_signup_logo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etEmail"
+                            style="?android:textAppearanceSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/outline_bg"
+                            android:drawablePadding="@dimen/activity_horizontal_margin_half"
+                            android:drawableStart="@drawable/ic_email"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:padding="@dimen/padding"
+                            android:textColor="@color/colorTextOther"
+                            app:font="@{@string/font_name_myriadpro_regular}"
+                            android:drawableLeft="@drawable/ic_email" />
+
+                        <EditText
+                            android:id="@+id/etPassword"
+                            style="?android:textAppearanceSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/outline_bg"
+                            android:drawablePadding="@dimen/activity_horizontal_margin_half"
+                            android:drawableStart="@drawable/ic_password"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:padding="@dimen/padding"
+                            android:textColor="@color/colorTextOther"
+                            app:font="@{@string/font_name_myriadpro_regular}"
+                            android:drawableLeft="@drawable/ic_password" />
+
+                        <EditText
+                            android:id="@+id/etConfPass"
+                            style="?android:textAppearanceSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/outline_bg"
+                            android:drawablePadding="@dimen/activity_horizontal_margin_half"
+                            android:drawableStart="@drawable/ic_password"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/confirm.password"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:padding="@dimen/padding"
+                            android:textColor="@color/colorTextOther"
+                            app:font="@{@string/font_name_myriadpro_regular}" />
+
+                        <EditText
+                            android:id="@+id/etUserName"
+                            style="?android:textAppearanceSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/outline_bg"
+                            android:drawablePadding="@dimen/activity_horizontal_margin_half"
+                            android:drawableStart="@drawable/ic_menu_about"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/full.name"
+                            android:inputType="textPersonName|textCapWords"
+                            android:maxLines="1"
+                            android:padding="@dimen/padding"
+                            android:textColor="@color/colorTextOther"
+                            app:font="@{@string/font_name_myriadpro_regular}" />
+
+                        <LinearLayout
+                            android:id="@+id/laytAgree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cbAgree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:button="@drawable/checkbox_bg"
+                                android:gravity="center" />
+
+
+                            <TextView
+                                android:id="@+id/tvTerms"
+                                style="?android:attr/textAppearanceSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:paddingEnd="@dimen/activity_horizontal_margin_half"
+                                android:paddingStart="@dimen/activity_horizontal_margin_half"
+                                android:textColor="@color/colorTextOther"
+                                android:textSize="12sp"
+                                app:font="@{@string/font_name_myriadpro_regular}" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnSignUp"
+                            style="?android:textAppearanceMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/btn_bg"
+                            android:stateListAnimator="@null"
+                            android:text="agree"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            app:font="@{@string/font_name_myriadpro_regular}"
+                            tools:targetApi="lollipop" />
+
+
+                        <TextView
+                            android:id="@+id/tvLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/activity_horizontal_margin"
+                           android:text="llll"
+                            android:textColor="@color/colorTextOther"
+                            app:font="@{@string/font_name_myriadpro_regular}" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <include
+                android:id="@+id/loader"
+                layout="@layout/loader_view"
+                app:canShowLoader="@{canShowLoader}" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</layout>

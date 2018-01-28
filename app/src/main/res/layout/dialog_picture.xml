@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+
+        <import type="android.view.View" />
+
+        <variable
+            name="canShowRemove"
+            type="boolean" />
+
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="?android:textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:padding="@dimen/activity_horizontal_margin_half"
+            android:text="Select option"
+            android:gravity="center_vertical"
+            android:minHeight="45dp"
+            android:textColor="@color/colorPrimary"
+            app:font="@{@string/font_name_helvertica}" />
+
+        <TextView
+            android:id="@+id/tvTakePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:minHeight="40dp"
+            android:padding="@dimen/activity_horizontal_margin_half"
+            android:text="Take photo"
+            app:font="@{@string/font_name_myriadpro_regular}" />
+
+
+        <TextView
+            android:id="@+id/tvChoose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:minHeight="40dp"
+            android:padding="@dimen/activity_horizontal_margin_half"
+            android:text="Choose from gallery"
+            app:font="@{@string/font_name_myriadpro_regular}" />
+
+        <TextView
+            android:id="@+id/tvRemove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:padding="@dimen/activity_horizontal_margin_half"
+            android:gravity="center_vertical"
+            android:visibility="@{canShowRemove ? View.VISIBLE : View.GONE}"
+            android:minHeight="40dp"
+            android:text="Remove photo"
+            app:font="@{@string/font_name_myriadpro_regular}" />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:minHeight="40dp"
+            android:padding="@dimen/activity_horizontal_margin_half"
+            android:text="Cancel"
+            app:font="@{@string/font_name_myriadpro_regular}" />
+    </LinearLayout>
+
+</layout>

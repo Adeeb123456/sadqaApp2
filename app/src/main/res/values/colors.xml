@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorTextPrimary">#555555</color>
+    <color name="colorTextOther">#595959</color>
+    <color name="colorCounter">#e1b770</color>
+    <color name="colorOutlineStroke">#c7c7c7</color>
+    <color name="colorHomeStroke">#b78b36</color>
+    <color name="colorSocialShareBg">#99c49741</color>
+
+
+    <color name="colorFaqDivider">#ccbb99</color>
+    <color name="colorDivider2">#c19e5d</color>
+    <color name="colorDivider3">#dba540</color>
+    <color name="colorDivider4">#ac7a1e</color>
+
+    <color name="colorHint">#bcbcbc</color>
+    <color name="colorSearchDivider">#bfbfbf</color>
+    <color name="colorCategoryDivider">#dddddd</color>
+    <color name="colorSearchText">#585858</color>
+    <color name="colorSearchHighlightText">#2b2b2b</color>
+    <color name="colorSearchResText">#96989f</color>
+    <color name="colorRatingNormal">#cfcfcf</color>
+    <color name="colorTabs">#f4f4f4</color>
+    <color name="colorDetailDivider">#be9c5a</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="clr_blur">#BF282828</color>
+    <color name="white">#FFFFFF</color>
+</resources>

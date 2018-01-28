@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">VideoStremingFragsdatabingRecycler</string>
+
+    <string name="font_myriadpro_regular" translatable="false">myriadpro_regular.otf</string>
+    <string name="font_name_myriadpro_regular" translatable="false">myriadpro_regular.otf</string>
+    <string name="font_helvertica" translatable="false">helvertica.otf</string>
+    <string name="font_name_helvertica" translatable="false">helvertica.otf</string>
+
+    <string name="home">Home</string>
+    <string name="login.signup">Log in / Sign up</string>
+    <string name="favorites">My Favorites</string>
+    <string name="about.us">About Us</string>
+    <string name="faqs">FAQs</string>
+    <string name="setting">Settings</string>
+    <string name="contact.us">Contact Us</string>
+    <string name="language">Language</string>
+
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="create.account">Create Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="current.password">Current Password</string>
+    <string name="confirm.password">Confirm Password</string>
+    <string name="retype.password">Retype New Password</string>
+    <string name="update.password">Update Password</string>
+    <string name="new.password">New Password</string>
+    <string name="full.name">Full Name</string>
+    <string name="agree.continue">Agree &amp; Create Account</string>
+    <string name="forget.pass">Forgot Password</string>
+    <string name="forget.password"><![CDATA[<u>Forgot Password?</u>]]></string>
+    <string name="read.privacy">Read Privacy Policy and Term of Use Agreement</string>
+    <string name="no.ac.register"><![CDATA[<font color=#595959>No Account?&nbsp;&nbsp;<b><font color=#595959>Register</b>]]></string>
+
+    <string name="have.account"><![CDATA[<font color=#555555>Have an account?&nbsp;&nbsp;<b><font color=#555555><u>Log in</u></b>]]></string>
+
+    <string name="error.write.storage.permission">Approval is needed to save your photo on your device.</string>
+
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:clickable="true">
+
+        <View
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/laytBottom"
+            android:layout_below="@id/topView"
+            android:orientation="vertical">
+
+            <com.theartofdev.edmodo.cropper.CropImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:cropScaleType="fitCenter" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/laytBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnCancel"
+                style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:stateListAnimator="@null"
+                android:text="cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                app:font="@{@string/font_name_myriadpro_regular}"
+                tools:targetApi="lollipop" />
+
+
+            <Button
+                android:id="@+id/save_photo"
+                style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:stateListAnimator="@null"
+                android:text="ok"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                app:font="@{@string/font_name_myriadpro_regular}"
+                tools:targetApi="lollipop" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
