@@ -1,5 +1,21 @@
 <resources>
-    <string name="app_name">VideoStremingFragsdatabingRecycler</string>
+    <string name="app_name">Sadqa App ne</string>
+    <string name="chose_you_amount">CHOOSE YOUR DONATION AMOUNT</string>
+    <string name="amount_1">Rs 5</string>
+    <string name="amount_2">Rs 10</string>
+    <string name="amount_3">Rs 50</string>
+    <string name="amount_4">Rs 100</string>
+    <string name="other_amount">Other Amount</string>
+
+
+    <string name="select_sim">Choose Your sim</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="alert_title_text">Send sadqa sms</string>
+    <string name="alert_msg">Send sms.Are you sure?</string>
+    <string name="facebook_app_id">851814128334484</string>
+    <string name="fb_login_protocol_scheme">fb851814128334484</string>
+
 
     <string name="font_myriadpro_regular" translatable="false">myriadpro_regular.otf</string>
     <string name="font_name_myriadpro_regular" translatable="false">myriadpro_regular.otf</string>
@@ -14,7 +30,6 @@
     <string name="setting">Settings</string>
     <string name="contact.us">Contact Us</string>
     <string name="language">Language</string>
-
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -39,5 +54,9 @@
     <string name="have.account"><![CDATA[<font color=#555555>Have an account?&nbsp;&nbsp;<b><font color=#555555><u>Log in</u></b>]]></string>
 
     <string name="error.write.storage.permission">Approval is needed to save your photo on your device.</string>
+    <string name="login">Login</string>
+    <string name="img.description">img</string>
+    <string name="log_out">Log out</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

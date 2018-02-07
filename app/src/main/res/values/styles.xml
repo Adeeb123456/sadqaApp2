@@ -43,6 +43,12 @@
             <item name="android:minWidth">300dp</item>
         </style>
 
+    <style name="alertDialogueAnimatuion">
+        <item name="android:windowEnterAnimation">
+            @anim/bounce
+        </item>
+        <item name="android:windowExitAnimation">@anim/slidedown</item>
+    </style>
 
 
         <!-- <style name="Base.Widget.AppCompat.SeekBar.">

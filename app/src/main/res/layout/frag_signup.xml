@@ -62,8 +62,8 @@
 
                     <ImageView
                         android:id="@+id/ivPicture"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
                         android:layout_gravity="center"
                         android:layout_margin="@dimen/activity_horizontal_margin"
                         android:contentDescription="nhh"
@@ -103,6 +103,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/activity_horizontal_margin"
                             android:background="@drawable/outline_bg"
+                            android:drawableLeft="@drawable/ic_password"
                             android:drawablePadding="@dimen/activity_horizontal_margin_half"
                             android:drawableStart="@drawable/ic_password"
                             android:focusableInTouchMode="true"
@@ -111,8 +112,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/padding"
                             android:textColor="@color/colorTextOther"
-                            app:font="@{@string/font_name_myriadpro_regular}"
-                            android:drawableLeft="@drawable/ic_password" />
+                            app:font="@{@string/font_name_myriadpro_regular}" />
 
                         <EditText
                             android:id="@+id/etConfPass"
@@ -147,6 +147,24 @@
                             android:padding="@dimen/padding"
                             android:textColor="@color/colorTextOther"
                             app:font="@{@string/font_name_myriadpro_regular}" />
+
+                        <EditText
+                            android:id="@+id/etUserPhone"
+                            style="?android:textAppearanceSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/outline_bg"
+                            android:drawablePadding="@dimen/activity_horizontal_margin_half"
+                            android:drawableStart="@android:drawable/ic_menu_call"
+                            android:focusableInTouchMode="true"
+                            android:hint="phone #"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="@dimen/activity_horizontal_margin_half"
+                            android:textColor="@color/colorTextOther"
+                            app:font="@{@string/font_name_myriadpro_regular}" />
+
 
                         <LinearLayout
                             android:id="@+id/laytAgree"
@@ -213,6 +231,7 @@
             <include
                 android:id="@+id/loader"
                 layout="@layout/loader_view"
+                android:visibility="gone"
                 app:canShowLoader="@{canShowLoader}" />
         </RelativeLayout>
     </LinearLayout>

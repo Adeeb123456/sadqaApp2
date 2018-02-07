@@ -33,7 +33,6 @@
             android:layout_height="66dp"
             android:layout_margin="@dimen/activity_horizontal_margin"
             android:indeterminate="true"
-            android:indeterminateDrawable="@drawable/progress_anim"
             android:indeterminateOnly="true"
             android:innerRadiusRatio="0"
             android:visibility="visible"

@@ -20,11 +20,10 @@
             android:layout_height="match_parent"
             android:layout_centerHorizontal="false"
             android:layout_centerVertical="false"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/ic_side_menu_bg" />
+            android:scaleType="centerCrop" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/ivPicture"
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:layout_alignParentLeft="false"
@@ -34,24 +33,23 @@
             android:layout_marginStart="16dp"
             android:background="@drawable/ic_review_holder"
             android:minHeight="85dp"
-            android:minWidth="85dp"
-            android:padding="16dp" />
+            android:minWidth="85dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tvUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="false"
-            android:layout_below="@+id/imageView2"
+            android:layout_below="@+id/ivPicture"
             android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:maxLines="2"
             android:text="name"
             android:textDirection="locale"
-            android:layout_marginLeft="16dp"
-            app:font="@{@string/font_name_myriadpro_regular}"/>
+            app:font="@{@string/font_name_myriadpro_regular}" />
 
     </RelativeLayout>
 

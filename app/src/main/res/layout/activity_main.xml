@@ -6,9 +6,9 @@
 <data >
 <import type="android.view.View"/>
     <import type="java.util.List"/>
-<import type="com.signup.model.DrawerItem"/>
+<import type="com.geniteam.SadqaApp.model.DrawerItem"/>
 <variable name="menus"
-    type="List&lt;com.signup.model.DrawerItem&gt;"/>
+    type="List&lt;com.geniteam.SadqaApp.model.DrawerItem&gt;"/>
 </data>
 
 <android.support.v4.widget.DrawerLayout
@@ -107,6 +107,14 @@
             app:imageSrc="@{menus[6].getResId()}"
             app:isVisible="@{true}"
             app:titleEn="@{menus[6].getTitle()}" />
+        <include
+            android:id="@+id/laytLogout"
+            layout="@layout/item_menu_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:imageSrc="@{menus.size()==7 ? menus[6].getResId() : 0}"
+            app:isVisible="@{menus.size()==7 ? true :false}"
+            app:titleEn="@{menus.size()==7 ? menus[6].getTitle() :  ``}"/>
     </LinearLayout>
 
 </ScrollView>

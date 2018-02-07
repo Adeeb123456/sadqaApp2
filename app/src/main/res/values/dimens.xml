@@ -22,4 +22,5 @@
     <dimen name="small.txt.size">12sp</dimen>
     <dimen name="tiny.txt.size">11sp</dimen>
     <dimen name="vry.tiny.txt.size">10sp</dimen>
+    <dimen name="border">1dp</dimen>
 </resources>

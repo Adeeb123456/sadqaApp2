@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\adeeb\AndroidStudioProjects\mFragmentTemplet-master\mFragmentTemplet-master\VideoStremingFragsdatabingRecycler.iml" filepath="C:\Users\adeeb\AndroidStudioProjects\mFragmentTemplet-master\mFragmentTemplet-master\VideoStremingFragsdatabingRecycler.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mFragmentTemplet-master.iml" filepath="$PROJECT_DIR$/mFragmentTemplet-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sadqaApp.iml" filepath="$PROJECT_DIR$/sadqaApp.iml" />
     </modules>
   </component>
 </project>
