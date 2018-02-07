@@ -125,16 +125,17 @@ return isDatesEquals;
     }
 
    public static int   getDayOFMonth() {
-
+       Calendar calendar = Calendar.getInstance();
+       int day = calendar.get(Calendar.DAY_OF_MONTH);
         GregorianCalendar cal = new GregorianCalendar();
        cal.add(Calendar.MONTH, 1);
-     String s=  cal.get(Calendar.DAY_OF_MONTH) + "-" + cal.get(Calendar.MONTH) + "-" + cal.get(Calendar.YEAR);
-      int  day = cal.get(Calendar.DAY_OF_MONTH);
-        int  month = cal.get(Calendar.MONTH);
-        int  year = cal.get(Calendar.YEAR);
+   //  String s=  cal.get(Calendar.DAY_OF_MONTH) + "-" + cal.get(Calendar.MONTH) + "-" + cal.get(Calendar.YEAR);
+     // int  day = cal.get(Calendar.DAY_OF_MONTH);
+       // int  month = cal.get(Calendar.MONTH);
+      ///  int  year = cal.get(Calendar.YEAR);
 
         Log.d("debug","dayofmonth "+day);
-       Log.i("degug","date "+s);
+      // Log.i("degug","date "+s);
 
 
 return day;
@@ -142,16 +143,17 @@ return day;
 
 
     public static int  getDayOFWeek() {
-
-        GregorianCalendar cal = new GregorianCalendar();
-        cal.add(Calendar.MONTH, 1);
-        String s=  cal.get(Calendar.DAY_OF_MONTH) + "-" + cal.get(Calendar.MONTH) + "-" + cal.get(Calendar.YEAR);
-        int  day = cal.get(Calendar.DAY_OF_MONTH);
-        int  month = cal.get(Calendar.MONTH);
-        int  year = cal.get(Calendar.YEAR);
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+       // GregorianCalendar cal = new GregorianCalendar();
+      //  cal.add(Calendar.MONTH, 1);
+        //String s=  cal.get(Calendar.DAY_OF_MONTH) + "-" + cal.get(Calendar.MONTH) + "-" + cal.get(Calendar.YEAR);
+      //  int  day = cal.get(Calendar.DAY_OF_MONTH);
+      //  int  month = cal.get(Calendar.MONTH);
+      //  int  year = cal.get(Calendar.YEAR);
 
         Log.d("debug","dayofweek "+day);
-        Log.i("degug","date "+s);
+     //   Log.i("degug","date "+s);
 
         return day;
     }
