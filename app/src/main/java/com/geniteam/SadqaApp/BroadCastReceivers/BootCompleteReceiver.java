@@ -20,18 +20,22 @@ public class BootCompleteReceiver extends BroadcastReceiver {
         if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)){
             Toast.makeText(context,"bootcomplete sdqa app",Toast.LENGTH_LONG).show();
             if (AppPref.getBooleanByKey(AppConstants.DAILY_SMS_key)) {
+                Toast.makeText(context,"daily",Toast.LENGTH_LONG).show();
 
                 AlarmManagerLocal.setAlarmDaily(context);
 
             }else  if (AppPref.getBooleanByKey(AppConstants.WEEKLY_SMS_key)){
+                Toast.makeText(context,"weelkly",Toast.LENGTH_LONG).show();
 
                 AlarmManagerLocal.scheduleAlarmWeekly(context,AppPref.getIntegerByKey(AppConstants.DAY_OF_WEEK_key));
 
             }else  if (AppPref.getBooleanByKey(AppConstants.BI_MONTHLY_key)){
+                Toast.makeText(context,"bi monthly",Toast.LENGTH_LONG).show();
 
                 AlarmManagerLocal.scheduleAlarmBiMonthly(context,AppPref.getIntegerByKey(AppConstants.DAY_OF_MONTH_key));
 
             }else  if (AppPref.getBooleanByKey(AppConstants.MONTHLYSMS_key)){
+                Toast.makeText(context,"monthly",Toast.LENGTH_LONG).show();
 
                 AlarmManagerLocal.scheduleAlarmMonthly(context,AppPref.getIntegerByKey(AppConstants.DAY_OF_MONTH_key));
 

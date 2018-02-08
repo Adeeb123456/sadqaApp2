@@ -44,10 +44,7 @@
         </style>
 
     <style name="alertDialogueAnimatuion">
-        <item name="android:windowEnterAnimation">
-            @anim/bounce
-        </item>
-        <item name="android:windowExitAnimation">@anim/slidedown</item>
+
     </style>
 
 

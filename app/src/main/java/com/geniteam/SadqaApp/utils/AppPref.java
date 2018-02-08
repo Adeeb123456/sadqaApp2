@@ -71,7 +71,7 @@ public class AppPref {
             editor.putInt(name, (Integer) value);
         }
 
-        editor.apply();
+        editor.commit();
     }
 
     public static void clear() {

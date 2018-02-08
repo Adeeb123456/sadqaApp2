@@ -45,7 +45,7 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    card_view:srcCompat="@mipmap/icondonate96" />
+                   />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -80,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@mipmap/ic_alarm_black_24dp" />
+                 />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -98,7 +98,7 @@
                     android:layout_alignParentEnd="true"
                     android:visibility="@{isdailySelected ? View.VISIBLE : View.INVISIBLE}"
 
-                    app:srcCompat="@mipmap/ic_check_circle_black_24dp" />
+                   />
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
@@ -123,7 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@mipmap/ic_alarm_black_24dp" />
+                 />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -140,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:visibility="@{isweeklySelected ? View.VISIBLE : View.INVISIBLE}"
-                    app:srcCompat="@mipmap/ic_check_circle_black_24dp" />
+                     />
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
@@ -166,7 +166,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@mipmap/ic_alarm_black_24dp" />
+                    />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -183,7 +183,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:visibility="@{isbiSelected ? View.VISIBLE : View.INVISIBLE}"
-                    app:srcCompat="@mipmap/ic_check_circle_black_24dp" />
+                     />
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
@@ -208,7 +208,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@mipmap/ic_alarm_black_24dp" />
+                 />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -225,7 +225,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:visibility="@{ismonthlySelected ? View.VISIBLE : View.INVISIBLE}"
-                    app:srcCompat="@mipmap/ic_check_circle_black_24dp" />
+                     />
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>

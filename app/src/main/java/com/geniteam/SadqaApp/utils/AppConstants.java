@@ -37,6 +37,9 @@ public class AppConstants {
     public static final String DAY_OF_MONTH_key="dayOfMonth";
 
     public static final String TO_DAY_DATE_key="TO_DAY_DATE";
+    public static final String LAST_DATE_key="LAST_DATE";
+    public static final String FUTURE_DATE_key="FUTURE_DATE";
+
 
 
     //

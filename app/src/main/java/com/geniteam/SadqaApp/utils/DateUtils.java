@@ -113,10 +113,10 @@ return isDatesEquals;
        int day;
         int month;
                 int year;
-
-        GregorianCalendar cal = new GregorianCalendar();
+Calendar cal=Calendar.getInstance();
+      //  GregorianCalendar cal = new GregorianCalendar();
        // cal.add(Calendar.DAY_OF_W, 2);
-       nextWeekDate=cal.get(Calendar.DAY_OF_MONTH) + "-" + cal.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.US) + "-" + cal.get(Calendar.YEAR);
+      // nextWeekDate=cal.get(Calendar.DAY_OF_MONTH) + "-" + cal.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.US) + "-" + cal.get(Calendar.YEAR);
         day = cal.get(Calendar.DAY_OF_MONTH);
         month = cal.get(Calendar.MONTH);
         year = cal.get(Calendar.YEAR);
