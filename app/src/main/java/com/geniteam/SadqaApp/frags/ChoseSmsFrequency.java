@@ -25,7 +25,11 @@ import com.geniteam.SadqaApp.utils.AppConstants;
 import com.geniteam.SadqaApp.utils.AppPref;
 import com.geniteam.SadqaApp.utils.DateUtils;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import static android.content.Context.ALARM_SERVICE;
@@ -158,23 +162,62 @@ public class ChoseSmsFrequency extends BaseFragment implements View.OnClickListe
             resetPrefValuesFrequencySms();
             AppPref.putValueByKey(AppConstants.BI_MONTHLY_key,true);
             AppPref.putValueByKey(AppConstants.DAY_OF_MONTH_key,DateUtils.getDayOFMonth());
-            AppPref.putValueByKey(AppConstants.TO_DAY_DATE_key,DateUtils.getCurrentDate(getContext()));
-            int dayOfweek= AppPref.getIntegerByKey(AppConstants.DAY_OF_MONTH_key);
-            AlarmManagerLocal.cancelAlarm2(getContext());
-            AlarmManagerLocal.scheduleAlarmBiMonthly(getContext(),dayOfweek);
+            AppPref.putValueByKey(AppConstants.LAST_DATE_key,DateUtils.getCurrentDate(getContext()));
+            addDaysToCurrentDate(14,DateUtils.getCurrentDate(getContext()));
+            final int dayOfweek= AppPref.getIntegerByKey(AppConstants.DAY_OF_MONTH_key);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    AlarmManagerLocal.cancelAlarm2(getContext());
+
+                    AlarmManagerLocal.scheduleAlarmBiMonthly(getContext(),dayOfweek);
+
+                }
+            },500);
 
         }else if(view.getId()==binding.monthly.getId()){
             checkedUnChecked(binding.monthly);
-            Log.d("debug","day "+DateUtils.getDayOFWeek());
+            Log.d("debug","current date "+DateUtils.getCurrentDate(getContext()));
             resetPrefValuesFrequencySms();
             AppPref.putValueByKey(AppConstants.MONTHLYSMS_key,true);
-            AppPref.putValueByKey(AppConstants.DAY_OF_MONTH_key,DateUtils.getDayOFWeek());
-            AppPref.putValueByKey(AppConstants.TO_DAY_DATE_key,DateUtils.getCurrentDate(getContext()));
-            int dayOfweek= AppPref.getIntegerByKey(AppConstants.DAY_OF_MONTH_key);
+            AppPref.putValueByKey(AppConstants.DAY_OF_MONTH_key,DateUtils.getDayOFMonth());
+            AppPref.putValueByKey(AppConstants.LAST_DATE_key,DateUtils.getCurrentDate(getContext()));
+            addDaysToCurrentDate(14,DateUtils.getCurrentDate(getContext()));
+            int dayOfMonth= AppPref.getIntegerByKey(AppConstants.DAY_OF_MONTH_key);
             AlarmManagerLocal.cancelAlarm2(getContext());
-            AlarmManagerLocal.scheduleAlarmMonthly(getContext(),dayOfweek);
+            AlarmManagerLocal.scheduleAlarmMonthly(getContext(),dayOfMonth);
 
         }
+    }
+
+    public void addDaysToCurrentDate(int days,String dateStr){
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+        Date futureDate;
+        Calendar calendarFuture;
+        SimpleDateFormat sdf;
+        String dateInString;
+        try {
+         futureDate=   simpleDateFormat.parse(dateStr);
+         calendarFuture=Calendar.getInstance();
+         calendarFuture.setTime(futureDate);
+       //  calendarFuture.
+        calendarFuture.add(Calendar.DAY_OF_MONTH,days);
+            sdf = new SimpleDateFormat("dd-MM-yyyy");
+            Date resultdateFuture = new Date(calendarFuture.getTimeInMillis());
+            dateInString = sdf.format(resultdateFuture);
+            System.out.println("String date:"+dateInString);
+       //  int day=calendarFuture.get(Calendar.DAY_OF_MONTH);
+       /////  int month=calendarFuture.get(Calendar.MONTH);
+        // int year=calendarFuture.get(Calendar.YEAR);
+        // String futureDateStr=day+"-"+month+"-"+year;
+         Log.d("debug","future date 1st time "+dateInString);
+            Log.d("debug","current date "+DateUtils.getCurrentDate(getContext()));
+
+            AppPref.putValueByKey(AppConstants.FUTURE_DATE_key,dateInString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
     }
 
 public void sendSms(){
